@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ycmxrrow.github.io/webfix-local/sitemap.xml
