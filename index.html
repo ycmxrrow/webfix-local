@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WebFix Local — One-Page Websites for Local Businesses in Grand Rapids, MI</title>
-<meta name="description" content="WebFix Local builds fast one-page websites for local businesses in Grand Rapids &amp; Kent County, MI — $750 flat, tap-to-call button, quote form, files you own. Care plans from $300/mo and Google Business Profile help.">
+<meta name="description" content="WebFix Local builds fast one-page websites for local businesses in Grand Rapids &amp; Kent County, MI — $750 flat, tap-to-call, files you own. First look is free. Google Business Profile fix-up $249, care plans from $300/mo. Call (269) 313-0843.">
 <meta name="theme-color" content="#0B2561">
 <meta property="og:type" content="website">
 <meta property="og:title" content="WebFix Local — Websites for Local Businesses">
-<meta property="og:description" content="A fast one-page website for your local business. $750 flat. Grand Rapids &amp; Kent County, Michigan.">
-<meta property="og:image" content="logo.png">
-<link rel="icon" href="logo.png">
+<meta property="og:description" content="A fast one-page website for your local business. $750 flat. First look is free. Grand Rapids &amp; Kent County, Michigan.">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,8 +18,9 @@
   "name": "WebFix Local",
   "slogan": "Websites for Local Businesses",
   "email": "theagencyuniverse@gmail.com",
-  "priceRange": "$750",
-  "image": "logo.png",
+  "telephone": "+1-269-313-0843",
+  "priceRange": "$249-$750",
+  "image": "assets/logo.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Grand Rapids",
@@ -31,10 +32,21 @@
     { "@type": "AdministrativeArea", "name": "Kent County, Michigan" }
   ],
   "parentOrganization": { "@type": "Organization", "name": "The Agency Universe" },
+  "sameAs": [
+    "https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639",
+    "https://contra.com/the_agency_universe/services",
+    "https://www.instagram.com/theagencyuniverse/",
+    "https://www.tiktok.com/@theagencyuniverse",
+    "https://www.youtube.com/@TheAgencyUniverse",
+    "https://www.facebook.com/profile.php?id=61595901165812"
+  ],
   "makesOffer": [
-    { "@type": "Offer", "name": "One-page website build", "price": "750", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Website care plan", "price": "300", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Google Business Profile fix-up", "price": "249", "priceCurrency": "USD" }
+    { "@type": "Offer", "name": "One-Page Website Fix", "price": "750", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Google Business Profile Fix-Up", "price": "249", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Website Care Plan", "price": "300", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Google Business Profile Management", "price": "250", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Website Care + GBP Management Bundle", "price": "399", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "FAQ Chatbot Setup", "price": "75", "priceCurrency": "USD" }
   ]
 }
 </script>
@@ -75,6 +87,14 @@
   .skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy-deep);padding:.6rem 1rem;font-weight:700;z-index:50}
   .skip:focus{left:0}
 
+  /* Top bar */
+  .topbar{background:var(--navy-deep);color:#C6CEE4;font-size:.86rem}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding-top:.45rem;padding-bottom:.45rem;flex-wrap:wrap}
+  .topbar b{color:var(--gold);font-weight:700}
+  .topbar a{color:var(--gold);font-weight:800;text-decoration:none}
+  .topbar a:hover{text-decoration:underline}
+  @media (max-width:640px){.topbar .wrap{justify-content:center;text-align:center}}
+
   /* Header */
   header.site{
     background:var(--navy);
@@ -83,40 +103,79 @@
   }
   .header-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.55rem;padding-bottom:.55rem}
   .brand img{height:52px;width:auto}
-  nav.main{display:flex;gap:1.4rem;flex-wrap:wrap}
+  nav.main{display:flex;gap:1.3rem;flex-wrap:wrap;align-items:center}
   nav.main a{
-    color:var(--white);text-decoration:none;font-weight:700;font-size:.95rem;
+    color:var(--white);text-decoration:none;font-weight:700;font-size:.92rem;
     text-transform:uppercase;letter-spacing:.05em;padding:.4rem 0;border-bottom:3px solid transparent;
   }
   nav.main a:hover,nav.main a:focus-visible{border-bottom-color:var(--gold)}
-  @media (max-width:640px){
+  .call-btn{
+    display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy-deep);
+    font-weight:800;font-size:.98rem;padding:.6rem 1.1rem;border-radius:999px;border:2px solid var(--gold-dark);
+    text-decoration:none;white-space:nowrap;box-shadow:0 4px 14px rgba(7,26,69,.25);
+  }
+  .call-btn:hover{background:var(--gold-dark)}
+  .call-btn svg{width:17px;height:17px;fill:var(--navy-deep)}
+  @media (max-width:760px){
+    nav.main{display:none}
     .brand img{height:42px}
-    .header-in{flex-wrap:wrap}
-    nav.main{gap:.9rem;padding-bottom:.35rem}
-    nav.main a{font-size:.82rem}
   }
 
   /* Hero */
-  .hero{background:linear-gradient(160deg,var(--navy) 55%,var(--navy-deep));color:var(--white);padding:3.4rem 0 3.8rem}
-  .hero .kicker{color:var(--gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;margin-bottom:1rem}
-  .hero h1{font-size:clamp(2rem,6.2vw,3.6rem);max-width:22ch}
+  .hero{
+    background:
+      radial-gradient(900px 420px at 85% -10%, rgba(250,191,45,.20), rgba(250,191,45,0) 60%),
+      linear-gradient(160deg,var(--navy) 55%,var(--navy-deep));
+    color:var(--white);padding:3.6rem 0 3.8rem;
+  }
+  .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(250,191,45,.5);padding:.4rem .8rem;border-radius:999px;margin-bottom:1.3rem;
+  }
+  .hero h1{font-size:clamp(2.1rem,6.2vw,3.7rem);max-width:23ch}
   .hero h1 .gold{color:var(--gold)}
   .hero p.sub{margin-top:1.2rem;font-size:clamp(1.02rem,2.4vw,1.25rem);max-width:56ch;color:#E8ECF7}
   .hero .price-line{margin-top:1rem;font-weight:700;color:var(--gold);font-size:1.05rem}
-  .cta-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+  .cta-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.9rem;align-items:center}
   .btn{
     display:inline-block;text-decoration:none;font-weight:800;border-radius:999px;
     padding:.85rem 1.6rem;font-size:1rem;border:2px solid transparent;text-align:center;
   }
-  .btn-gold{background:var(--gold);color:var(--navy-deep)}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);border-color:var(--gold-dark)}
   .btn-gold:hover{background:var(--gold-dark)}
-  .btn-ghost{border-color:var(--white);color:var(--white);background:transparent}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-gold.big{
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-size:1.3rem;padding:1.05rem 1.9rem;box-shadow:0 6px 20px rgba(7,26,69,.35);
+  }
+  .btn-gold.big svg{width:22px;height:22px;fill:var(--navy-deep)}
+  .btn-ghost{border-color:rgba(255,255,255,.55);color:var(--white);background:transparent;font-size:1.05rem;padding:1rem 1.7rem}
+  .btn-ghost:hover{border-color:var(--white);color:var(--white)}
   .btn-navy{background:var(--navy);color:var(--white)}
   .btn-navy:hover{background:var(--navy-deep)}
+  .hero-trust{margin-top:1.7rem;font-size:.95rem;color:#B9C7E8;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+  .hero-trust .dot{color:var(--gold)}
+
+  /* Trust row */
+  .trust{background:var(--white);border-bottom:1px solid var(--line)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;padding-top:1.6rem;padding-bottom:1.6rem}
+  .trust-item{display:flex;gap:.75rem;align-items:flex-start}
+  .trust-item svg{width:26px;height:26px;fill:var(--navy);flex:0 0 auto;margin-top:2px}
+  .trust-item b{display:block;font-size:1rem;color:var(--navy)}
+  .trust-item span{font-size:.86rem;color:var(--muted)}
+  @media (max-width:900px){.trust .wrap{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.trust .wrap{grid-template-columns:1fr}}
+
+  /* Free check band */
+  .freecheck{background:linear-gradient(90deg,#FFF3CF,#FFE9A8);border-bottom:1px solid var(--gold-dark)}
+  .freecheck .wrap{display:flex;gap:1.6rem;align-items:center;justify-content:space-between;padding-top:1.7rem;padding-bottom:1.7rem;flex-wrap:wrap}
+  .freecheck h2{font-size:clamp(1.3rem,3.4vw,1.8rem);color:var(--navy)}
+  .freecheck p{margin-top:.4rem;color:var(--ink);max-width:58ch}
+  .freecheck .btns{display:flex;gap:.8rem;flex-wrap:wrap}
+  .btn-outline{background:transparent;border-color:var(--navy);color:var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:var(--white)}
 
   /* Sections */
-  section{padding:3.2rem 0}
+  section{padding:3.4rem 0}
   section.alt{background:var(--paper)}
   .sec-head{max-width:46rem;margin-bottom:2rem}
   .sec-head .kicker{color:var(--gold-dark);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:.5rem}
@@ -132,8 +191,10 @@
     box-shadow:0 4px 18px rgba(11,37,97,.06);
   }
   .card.featured{border:2px solid var(--navy);box-shadow:0 10px 30px rgba(11,37,97,.14)}
+  .card .icon{width:50px;height:50px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .card .icon svg{width:27px;height:27px;fill:var(--gold)}
   .card .tag{align-self:flex-start;background:var(--navy);color:var(--gold);font-weight:800;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .6rem;border-radius:6px}
-  .card h3{font-size:1.35rem;color:var(--navy)}
+  .card h3{font-size:1.32rem;color:var(--navy)}
   .card .price{font-size:2rem;font-weight:800;color:var(--ink);line-height:1}
   .card .price small{font-size:.95rem;font-weight:700;color:var(--muted)}
   .card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;color:var(--ink)}
@@ -142,8 +203,15 @@
   .card .fine{color:var(--muted);font-size:.92rem}
   .card .btn{margin-top:auto}
 
+  /* Proof */
+  .proof-fig{margin:0 0 1.6rem}
+  .proof-fig img{border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(11,37,97,.12);width:100%}
+  .proof-fig figcaption{margin-top:.6rem;color:var(--muted);font-size:.95rem;text-align:center}
+  .proof-note{max-width:52rem;margin:0 auto;text-align:center;color:var(--muted)}
+  .proof-note b{color:var(--navy)}
+
   /* Steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;counter-reset:step}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   @media (max-width:900px){.steps{grid-template-columns:1fr}}
   .step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
   .step .num{
@@ -152,6 +220,11 @@
   }
   .step h3{font-size:1.15rem;color:var(--navy);margin-bottom:.4rem}
   .step p{color:var(--muted)}
+
+  /* Service area chips */
+  .chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem}
+  .chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-size:.92rem;font-weight:600;color:var(--navy)}
+  .chip.more{background:var(--navy);color:var(--white);border-color:var(--navy)}
 
   /* Honesty */
   .honesty{background:var(--navy);color:var(--white);border-radius:var(--radius);padding:2rem 1.8rem;display:flex;gap:1.4rem;align-items:flex-start}
@@ -173,6 +246,12 @@
   .faq.open button .chev{transform:rotate(45deg)}
   .faq .answer{display:none;padding:0 1.2rem 1.1rem;color:var(--muted)}
   .faq.open .answer{display:block}
+  .faq-note{margin-top:1.1rem;color:var(--muted);max-width:52rem}
+
+  /* Marketplace */
+  .market p{max-width:56ch;color:var(--muted);font-size:1.05rem}
+  .market .cta-row{margin-top:1.3rem}
+  .market .soon{font-weight:700;color:var(--muted);align-self:center}
 
   /* Contact */
   .contact{background:linear-gradient(160deg,var(--navy) 55%,var(--navy-deep));color:var(--white);text-align:center}
@@ -182,27 +261,510 @@
   .contact .cta-row{justify-content:center}
   .contact .addr{margin-top:1.4rem;font-weight:700;color:var(--gold);font-size:1.05rem;word-break:break-all}
 
-  footer.site{background:var(--navy-deep);color:#C6CEE4;padding:2rem 0;font-size:.95rem}
-  .foot-in{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+  /* Footer */
+  footer.site{background:var(--navy-deep);color:#C6CEE4;padding:2.2rem 0;font-size:.95rem}
+  .foot-in{display:flex;justify-content:space-between;gap:1.6rem;flex-wrap:wrap;align-items:flex-start}
   footer.site .fb{display:flex;align-items:center;gap:.8rem}
-  footer.site .fb img{height:34px;width:auto}
+  footer.site .fb img{height:40px;width:auto}
   footer.site a{color:var(--gold)}
+  .socials{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+  .socials a{
+    color:var(--gold);border:1px solid rgba(250,191,45,.45);border-radius:999px;
+    padding:.32rem .85rem;text-decoration:none;font-weight:700;font-size:.88rem;
+  }
+  .socials a:hover{background:var(--gold);color:var(--navy-deep)}
+  .foot-div{margin-top:.9rem;max-width:34rem}
+  @media (max-width:720px){footer.site{padding-bottom:5.2rem}}
+
+  /* Sticky mobile call bar */
+  .mobile-call{display:none}
+  @media (max-width:720px){
+    .mobile-call{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background:var(--gold);border-top:2px solid var(--gold-dark);
+      align-items:center;justify-content:center;gap:.6rem;
+      font-weight:800;font-size:1.12rem;color:var(--navy-deep);padding:.95rem .6rem;text-decoration:none;
+    }
+    .mobile-call svg{width:20px;height:20px;fill:var(--navy-deep)}
+    body{padding-bottom:58px}
+    /* keep the chat bubble clear of the sticky call bar */
+    body #faqw-root.faqw-container{bottom:86px}
+    .hero .btn-gold.big{width:100%;justify-content:center}
+    .hero .btn-ghost{width:100%}
+  }
 </style>
+<style>
+/* ========================================================================
+       FAQ WIDGET STYLES (All prefixed with faqw- to prevent style collisions)
+       ======================================================================== */
+    #faqw-root{
+      --faqw-primary: #0B2561;
+      --faqw-accent: #071A45;
+      --faqw-text: #ffffff;
+      --faqw-bg: #ffffff;
+      --faqw-bot-bubble: #f3f4f6;
+      --faqw-bot-text: #1f2937;
+      --faqw-user-bubble: var(--faqw-primary);
+      --faqw-user-text: #ffffff;
+      --faqw-border: #e5e7eb;
+      --faqw-chip-bg: #ffffff;
+      --faqw-chip-border: color-mix(in srgb, var(--faqw-primary) 25%, white);
+      --faqw-chip-hover-bg: color-mix(in srgb, var(--faqw-primary) 8%, white);
+      --faqw-input-border: #d1d5db;
+      --faqw-input-bg: #f9fafb;
+      --faqw-input-text: #1f2937;
+      --faqw-focus-ring: color-mix(in srgb, var(--faqw-primary) 18%, transparent);
+      --faqw-disabled: #cbd5e1;
+      --faqw-muted: #64748b;
+      --faqw-avatar-bg: rgba(255, 255, 255, 0.2);
+      --faqw-online: #22c55e;
+      --faqw-online-ring: rgba(34, 197, 94, 0.3);
+      --faqw-hover-overlay: rgba(255, 255, 255, 0.15);
+      --faqw-sub-bg: #f8fafc;
+      --faqw-messages-bg: #fafbfc;
+      --faqw-btn-shadow: rgba(0, 0, 0, 0.2);
+      --faqw-focus-outline: var(--faqw-primary);
+      --faqw-radius: 16px;
+      --faqw-shadow: 0 12px 32px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.08);
+      --faqw-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    #faqw-root *, #faqw-root *::before, #faqw-root *::after{
+      box-sizing: border-box;
+    }
+
+    /* Widget Container */
+    #faqw-root.faqw-container{
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999999;
+      font-family: var(--faqw-font);
+      line-height: 1.45;
+    }
+
+    /* Floating Bubble Button */
+    #faqw-root .faqw-bubble-btn{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--faqw-primary);
+      color: var(--faqw-text);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 18px var(--faqw-btn-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.15s ease;
+      outline: none;
+      position: relative;
+    }
+    #faqw-root .faqw-bubble-btn:hover{
+      transform: scale(1.08);
+      background-color: var(--faqw-accent);
+    }
+    #faqw-root .faqw-bubble-btn:focus-visible{
+      outline: 3px solid var(--faqw-focus-outline);
+      outline-offset: 3px;
+    }
+    #faqw-root .faqw-bubble-btn svg{
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    #faqw-root .faqw-bubble-btn .faqw-icon-close{
+      display: none;
+      width: 24px;
+      height: 24px;
+    }
+    #faqw-root.faqw-container.faqw-is-open .faqw-bubble-btn .faqw-icon-chat{
+      display: none;
+    }
+    #faqw-root.faqw-container.faqw-is-open .faqw-bubble-btn .faqw-icon-close{
+      display: block;
+    }
+    #faqw-root .faqw-panel{
+      position: absolute;
+      bottom: 76px;
+      right: 0;
+      width: 380px;
+      max-width: calc(100vw - 32px);
+      height: 560px;
+      max-height: calc(100vh - 110px);
+      background-color: var(--faqw-bg);
+      border-radius: var(--faqw-radius);
+      box-shadow: var(--faqw-shadow);
+      border: 1px solid var(--faqw-border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: scale(0.92) translateY(16px);
+      transform-origin: bottom right;
+      pointer-events: none;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+    }
+    #faqw-root .faqw-panel[hidden]{
+      display: none;
+    }
+    #faqw-root.faqw-container.faqw-is-open .faqw-panel{
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    /* Panel Header */
+    #faqw-root .faqw-header{
+      background-color: var(--faqw-primary);
+      color: var(--faqw-text);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top-left-radius: var(--faqw-radius);
+      border-top-right-radius: var(--faqw-radius);
+      user-select: none;
+    }
+    #faqw-root .faqw-header-info{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    #faqw-root .faqw-avatar{
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--faqw-avatar-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--faqw-text);
+      flex-shrink: 0;
+    }
+    #faqw-root .faqw-avatar svg{
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    #faqw-root .faqw-header-text{
+      display: flex;
+      flex-direction: column;
+    }
+    #faqw-root .faqw-header-title{
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    #faqw-root .faqw-header-status{
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.9;
+    }
+    #faqw-root .faqw-status-dot{
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--faqw-online);
+      display: inline-block;
+      box-shadow: 0 0 0 2px var(--faqw-online-ring);
+    }
+    #faqw-root .faqw-close-btn{
+      background: transparent;
+      border: none;
+      color: var(--faqw-text);
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+      transition: opacity 0.15s ease, background-color 0.15s ease;
+    }
+    #faqw-root .faqw-close-btn:hover{
+      opacity: 1;
+      background-color: var(--faqw-hover-overlay);
+    }
+    #faqw-root .faqw-close-btn:focus-visible{
+      outline: 2px solid var(--faqw-text);
+      outline-offset: 2px;
+    }
+    #faqw-root .faqw-close-btn svg{
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Disclaimer Sub-banner */
+    #faqw-root .faqw-sub-banner{
+      background-color: var(--faqw-sub-bg);
+      border-bottom: 1px solid var(--faqw-border);
+      padding: 6px 16px;
+      font-size: 11px;
+      color: var(--faqw-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    #faqw-root .faqw-sub-banner svg{
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* Messages List */
+    #faqw-root .faqw-messages{
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: var(--faqw-messages-bg);
+      scroll-behavior: smooth;
+    }
+    #faqw-root .faqw-messages::-webkit-scrollbar{
+      width: 6px;
+    }
+    #faqw-root .faqw-messages::-webkit-scrollbar-thumb{
+      background-color: var(--faqw-disabled);
+      border-radius: 3px;
+    }
+
+    /* Message Bubbles */
+    #faqw-root .faqw-msg-row{
+      display: flex;
+      flex-direction: column;
+      max-width: 86%;
+      animation: faqwFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes faqwFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    #faqw-root .faqw-msg-row.faqw-bot{
+      align-self: flex-start;
+    }
+    #faqw-root .faqw-msg-row.faqw-user{
+      align-self: flex-end;
+    }
+    #faqw-root .faqw-msg-bubble{
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+    #faqw-root .faqw-msg-row.faqw-bot .faqw-msg-bubble{
+      background-color: var(--faqw-bot-bubble);
+      color: var(--faqw-bot-text);
+      border-bottom-left-radius: 4px;
+      border: 1px solid var(--faqw-border);
+    }
+    #faqw-root .faqw-msg-row.faqw-user .faqw-msg-bubble{
+      background-color: var(--faqw-user-bubble);
+      color: var(--faqw-user-text);
+      border-bottom-right-radius: 4px;
+    }
+    #faqw-root .faqw-msg-time{
+      font-size: 10.5px;
+      color: var(--faqw-muted);
+      margin-top: 3px;
+      padding: 0 4px;
+    }
+    #faqw-root .faqw-msg-row.faqw-bot .faqw-msg-time{
+      align-self: flex-start;
+    }
+    #faqw-root .faqw-msg-row.faqw-user .faqw-msg-time{
+      align-self: flex-end;
+    }
+
+    /* Suggested Quick Chips */
+    #faqw-root .faqw-chips-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    #faqw-root .faqw-chip{
+      background-color: var(--faqw-chip-bg);
+      color: var(--faqw-primary);
+      border: 1px solid var(--faqw-chip-border);
+      border-radius: 9999px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    #faqw-root .faqw-chip:hover{
+      background-color: var(--faqw-chip-hover-bg);
+      border-color: var(--faqw-primary);
+      transform: translateY(-1px);
+    }
+    #faqw-root .faqw-chip:focus-visible{
+      outline: 2px solid var(--faqw-primary);
+      outline-offset: 1px;
+    }
+
+    /* Typing Indicator */
+    #faqw-root .faqw-typing{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      background-color: var(--faqw-bot-bubble);
+      border: 1px solid var(--faqw-border);
+      border-radius: 12px;
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      margin-top: -4px;
+    }
+    #faqw-root .faqw-typing-dot{
+      width: 6px;
+      height: 6px;
+      background-color: var(--faqw-muted);
+      border-radius: 50%;
+      animation: faqwBounce 1.3s infinite ease-in-out;
+    }
+    #faqw-root .faqw-typing-dot:nth-child(2){ animation-delay: 0.2s; }
+    #faqw-root .faqw-typing-dot:nth-child(3){ animation-delay: 0.4s; }
+    @keyframes faqwBounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+      40% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    /* Input Area */
+    #faqw-root .faqw-input-area{
+      padding: 12px 14px;
+      background-color: var(--faqw-bg);
+      border-top: 1px solid var(--faqw-border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #faqw-root .faqw-input-wrapper{
+      flex: 1;
+      position: relative;
+    }
+    #faqw-root .faqw-input{
+      width: 100%;
+      border: 1px solid var(--faqw-input-border);
+      border-radius: 20px;
+      padding: 9px 14px;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      background-color: var(--faqw-input-bg);
+      color: var(--faqw-input-text);
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    #faqw-root .faqw-input:focus{
+      border-color: var(--faqw-primary);
+      background-color: var(--faqw-bg);
+      box-shadow: 0 0 0 3px var(--faqw-focus-ring);
+    }
+    #faqw-root .faqw-send-btn{
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--faqw-primary);
+      color: var(--faqw-text);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+      flex-shrink: 0;
+    }
+    #faqw-root .faqw-send-btn:hover{
+      background-color: var(--faqw-accent);
+      transform: scale(1.04);
+    }
+    #faqw-root .faqw-send-btn:active{
+      transform: scale(0.96);
+    }
+    #faqw-root .faqw-send-btn:focus-visible{
+      outline: 2px solid var(--faqw-primary);
+      outline-offset: 2px;
+    }
+    #faqw-root .faqw-send-btn:disabled{
+      background-color: var(--faqw-disabled);
+      cursor: not-allowed;
+      transform: none;
+    }
+    #faqw-root .faqw-send-btn svg{
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      margin-left: 1px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      #faqw-root.faqw-container{
+        bottom: 16px;
+        right: 16px;
+      }
+      #faqw-root .faqw-panel{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 85vh;
+        max-height: 85vh;
+        border-radius: 16px 16px 0 0;
+        border-bottom: none;
+      }
+    }
+  </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="topbar">
+  <div class="wrap">
+    <div>Serving <b>Grand Rapids &amp; Kent County</b> · First reply within <b>one business day</b></div>
+    <div><a href="tel:+12693130843">(269) 313-0843</a></div>
+  </div>
+</div>
+
 <header class="site">
   <div class="wrap header-in">
     <a class="brand" href="#top" aria-label="WebFix Local — home">
-      <img src="logo.png" alt="WebFix Local — Websites for Local Businesses" width="1600" height="533">
+      <img src="assets/logo.png" alt="WebFix Local — Websites for Local Businesses" width="1600" height="533">
     </a>
     <nav class="main" aria-label="Main">
       <a href="#services">Services</a>
+      <a href="#proof">The Proof</a>
       <a href="#how">How It Works</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="call-btn" href="tel:+12693130843">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+      (269) 313-0843
+    </a>
   </div>
 </header>
 
@@ -210,30 +772,74 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="wrap">
-      <p class="kicker">WebFix Local · Grand Rapids, Michigan</p>
+      <span class="eyebrow">WebFix Local · Grand Rapids, Michigan</span>
       <h1>Your customers Google your shop before they call it. <span class="gold">What do they find?</span></h1>
       <p class="sub">We build fast one-page websites for local service businesses in Grand Rapids &amp; Kent County — made to turn searches into phone calls.</p>
       <p class="price-line">$750 flat. Half to start, half at launch. No surprises.</p>
       <div class="cta-row">
-        <a class="btn btn-gold" href="mailto:theagencyuniverse@gmail.com?subject=Website%20for%20my%20business%20—%20WebFix%20Local">Email Us About Your Website</a>
-        <a class="btn btn-ghost" href="#services">See Services &amp; Pricing</a>
+        <a class="btn-gold big" href="tel:+12693130843">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+          Call (269) 313-0843
+        </a>
+        <a class="btn btn-ghost" href="mailto:theagencyuniverse@gmail.com?subject=Website%20for%20my%20business%20—%20WebFix%20Local">Get a Free Quote</a>
       </div>
-      <p style="margin-top:1.1rem"><a style="color:#FABF2D;font-weight:800" href="tel:+12693130843">Call (269) 313-0843</a></p>
+      <div class="hero-trust">
+        <span>Flat prices, in writing</span><span class="dot">•</span>
+        <span>The finished files are yours</span><span class="dot">•</span>
+        <span>First reply within one business day</span>
+      </div>
     </div>
   </section>
+
+  <!-- TRUST ROW -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4a2 2 0 0 0-2 2v7c0 .55.22 1.05.59 1.42l9 9a2 2 0 0 0 2.82 0l7-7a2 2 0 0 0 0-2.84zM6.5 8A1.5 1.5 0 0 1 5 6.5 1.5 1.5 0 0 1 6.5 5 1.5 1.5 0 0 1 8 6.5 1.5 1.5 0 0 1 6.5 8z"/></svg>
+        <div><b>Flat Price, In Writing</b><span>The price on this page is the price you pay.</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        <div><b>The Files Are Yours</b><span>No lock-in, no hostage hosting. Ever.</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div><b>Defects Fixed Free</b><span>Anything we built that breaks is fixed free for 30 days.</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <div><b>One Business Day</b><span>First reply to every message within one business day.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE CHECK / LEAD MAGNET -->
+  <div class="freecheck" id="freecheck">
+    <div class="wrap">
+      <div>
+        <h2>First look is free</h2>
+        <p>We check your current website and your Google listing, and tell you in plain words what's helping, what's hurting, and what we'd fix first. No obligation. Rather look yourself? Start with our free checklist.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=Free%20first%20look%20—%20WebFix%20Local">Get My Free Check</a>
+        <a class="btn btn-outline" href="https://payhip.com/b/6wjpB">Free Checklist: 20 Website Checks</a>
+      </div>
+    </div>
+  </div>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker">Services</p>
-        <h2>Three ways we fix your online presence</h2>
+        <p class="kicker">Services &amp; Pricing</p>
+        <h2>Everything your shop needs to be found — priced in the open</h2>
         <p>Straight pricing, published up front. Everything is built to be fast, simple, and yours.</p>
       </div>
       <div class="cards">
         <article class="card featured">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4l2 3H7l2-3H5a2 2 0 0 1-2-2V5zm2 .5V15h14V5.5H5z"/></svg></div>
           <span class="tag">Most Popular</span>
-          <h3>One-Page Website</h3>
+          <h3>One-Page Website Fix</h3>
           <p class="price">$750 <small>flat · 50% to start / 50% at launch</small></p>
           <ul>
             <li>One-page responsive website — looks right on every phone</li>
@@ -249,9 +855,25 @@
         </article>
 
         <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+          <span class="tag">Get Found</span>
+          <h3>Google Business Profile Fix-Up</h3>
+          <p class="price">$249 <small>one-time</small></p>
+          <ul>
+            <li>Categories, services, and service area set correctly</li>
+            <li>Hours and details corrected — no more wrong info on Google</li>
+            <li>Photos added and description written in your customers' words</li>
+            <li>You keep ownership — we work as a manager on your profile</li>
+          </ul>
+          <p class="fine">Your Google listing is often the first thing a customer sees — before your website.</p>
+          <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=Google%20Business%20Profile%20—%20WebFix%20Local">Fix My Listing</a>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></div>
           <span class="tag">Keep It Current</span>
           <h3>Website Care Plan</h3>
-          <p class="price">From $300<small>/mo</small></p>
+          <p class="price">$300-500/mo <small>by site size</small></p>
           <ul>
             <li>Monthly content updates — prices, photos, hours, services</li>
             <li>Link, form &amp; contact-detail checks</li>
@@ -264,23 +886,74 @@
         </article>
 
         <article class="card">
-          <span class="tag">Get Found</span>
-          <h3>Google Business Profile</h3>
-          <p class="price">$249 <small>one-time fix-up</small></p>
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+          <span class="tag">Stay Found</span>
+          <h3>Google Business Profile Management</h3>
+          <p class="price">$250/mo</p>
           <ul>
-            <li>Profile fix-up: categories, services, photos, hours, details — done right</li>
-            <li>Ongoing management available at $250/mo</li>
-            <li>Bundle profile management with a care plan for $399/mo total</li>
+            <li>Regular posts and photo updates on your listing</li>
+            <li>Every review replied to</li>
+            <li>Hours and holiday hours kept current</li>
+            <li>A plain-English report every month</li>
           </ul>
-          <p class="fine">Your Google listing is often the first thing a customer sees — before your website.</p>
-          <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=Google%20Business%20Profile%20—%20WebFix%20Local">Fix My Listing</a>
+          <p class="fine">Your listing stays active and accurate — the two things Google rewards.</p>
+          <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=Google%20Business%20Profile%20—%20WebFix%20Local">Manage My Listing</a>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.26-7.38 5.73zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg></div>
+          <span class="tag">Both, One Report</span>
+          <h3>Website Care + GBP Bundle</h3>
+          <p class="price">$399/mo</p>
+          <ul>
+            <li>Everything in the Website Care Plan</li>
+            <li>Everything in Google Business Profile Management</li>
+            <li>One combined report, one bill, nothing falls between the two</li>
+          </ul>
+          <p class="fine">For shops that want the website and the listing handled together.</p>
+          <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=Google%20Business%20Profile%20—%20WebFix%20Local">Bundle It</a>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+          <span class="tag">Answers While You Work</span>
+          <h3>FAQ Chatbot Setup</h3>
+          <p class="price">from $75</p>
+          <ul>
+            <li>A chat widget for your website — the one on this page is ours; try it, bottom right</li>
+            <li>Answers only from an FAQ list you approve: your prices, hours, area, policies</li>
+            <li>It doesn't make things up — if it doesn't know, it points to your phone and email</li>
+            <li>No monthly platform fees</li>
+          </ul>
+          <p class="fine">Your customers get answers at 9 p.m. You get the calls that matter.</p>
+          <a class="btn btn-navy" href="mailto:theagencyuniverse@gmail.com?subject=FAQ%20chatbot%20setup%20—%20WebFix%20Local">Add a Chatbot</a>
         </article>
       </div>
     </div>
   </section>
 
-  <div style="margin-top:24px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:12px"><p>Prefer to hire through a marketplace? You can also hire us on Upwork or Contra — same flat prices, platform checkout and messaging.</p><p><a class="btn btn-navy" href="https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639">Hire WebFix Local on Upwork</a> <a class="btn btn-navy" href="https://contra.com/the_agency_universe/services">Hire WebFix Local on Contra</a></p></div><!-- HOW IT WORKS -->
-  <section class="alt" id="how">
+  <!-- PROOF -->
+  <section class="alt" id="proof">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">The Proof</p>
+        <h2>Outdated → current. This is the fix.</h2>
+        <p>Same business, same phone number on both sides. On the old site the number appears once, buried in the footer. On the new one, it's where a thumb expects it — eight times.</p>
+      </div>
+      <figure class="proof-fig">
+        <img src="assets/before-after-desktop.png" alt="Side-by-side comparison: a dated 2009-style heating company website next to its clean modern redesign — desktop view" width="1280" height="769" loading="lazy">
+        <figcaption>Sample redesign — fictional business. Desktop view.</figcaption>
+      </figure>
+      <figure class="proof-fig">
+        <img src="assets/before-after-mobile.png" alt="Side-by-side comparison on phones: the old website shrunk and unreadable on a phone next to the redesigned mobile site with a large tap-to-call button" width="1280" height="769" loading="lazy">
+        <figcaption>Sample redesign — fictional business. On phones — where most of your customers are.</figcaption>
+      </figure>
+      <p class="proof-note"><b>Why "sample"?</b> This is our Northline Heating &amp; Cooling sample — a fictional Grand Rapids company we rebuilt to show the work. Sample work is always labeled sample here, because it is one. Your site would be built the same way, with your real name on it.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
     <div class="wrap">
       <div class="sec-head">
         <p class="kicker">How It Works</p>
@@ -303,18 +976,31 @@
           <p>You get 2 rounds of revisions. When it looks right, we launch it, hand over the finished files, and your 30-day free defect window opens.</p>
         </div>
       </div>
+
+      <div class="sec-head" style="margin-top:3rem;margin-bottom:0">
+        <p class="kicker">Service Area</p>
+        <h2>Grand Rapids + Kent County</h2>
+        <p>We're a Grand Rapids studio serving the towns around us:</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Grand Rapids</span><span class="chip">Wyoming</span><span class="chip">Kentwood</span>
+        <span class="chip">Grandville</span><span class="chip">Walker</span><span class="chip">Comstock Park</span>
+        <span class="chip">Jenison</span><span class="chip">Hudsonville</span><span class="chip">Byron Center</span>
+        <span class="chip">Cascade</span><span class="chip more">+ all of Kent County</span>
+      </div>
     </div>
   </section>
 
   <!-- HONESTY -->
-  <section>
+  <section style="padding-top:0">
     <div class="wrap">
       <div class="honesty">
         <div class="mark" aria-hidden="true">✦</div>
         <div>
           <h2>Straight With You: How We Work</h2>
           <p>We're a small AI-assisted studio. Modern tools speed up the build; every page gets a human-standard QA pass — links, forms, spelling, mobile layout — before you see it.</p>
-          <p>We don't use fake reviews, stock-photo "clients," or made-up numbers. Want to see the style first? Ask us for a sample design — we'll send one, clearly labeled as a sample, because it is one.</p>
+          <p>We don't use fake reviews, stock-photo "clients," or made-up numbers. Want to see the style first? Look at the sample above — it's labeled a sample because it is one.</p>
+          <p>And the promise nobody honest can make: a #1 ranking on Google. Google itself says rankings can't be bought or guaranteed — anyone selling you one is selling a story. We sell the work: a fast page Google can read, a correct listing, and updates that actually happen.</p>
         </div>
       </div>
     </div>
@@ -346,12 +1032,29 @@
         </div>
         <div class="faq">
           <button type="button" aria-expanded="false">Will it work on phones?<span class="chev" aria-hidden="true">+</span></button>
-          <div class="answer"><p>Yes — phone-first is the default, and the tap-to-call button is there for exactly that reason. Most local-business traffic is mobile, and every page gets a phone-layout check in our QA pass.</p></div>
+          <div class="answer"><p>Yes — phone-first is the default, and the tap-to-call button is there for exactly that reason. Most local-business traffic is mobile, and every page gets a phone-layout check in our QA pass. This page included — check the bottom of your screen.</p></div>
         </div>
         <div class="faq">
           <button type="button" aria-expanded="false">What do you need from me to start?<span class="chev" aria-hidden="true">+</span></button>
           <div class="answer"><p>Your business name, what you offer, your service area, the phone number and email the form should reach, and your logo and photos if you have them. That's it — we'll walk you through the rest by email.</p></div>
         </div>
+      </div>
+      <p class="faq-note">Shorter version? The chat bubble at the bottom right answers the common ones instantly — it's the same FAQ chatbot we set up for clients, running on our own facts.</p>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE -->
+  <section class="market">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="kicker">Your Call</p>
+        <h2>Prefer to hire through a marketplace?</h2>
+      </div>
+      <p style="margin-top:.7rem">You can also hire us on Upwork or Contra — same flat prices, platform checkout and messaging.</p>
+      <div class="cta-row">
+        <a class="btn btn-navy" href="https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639">Hire WebFix Local on Upwork</a>
+        <a class="btn btn-navy" href="https://contra.com/the_agency_universe/services">Hire WebFix Local on Contra</a>
+        <span class="soon">Fiverr — opening soon</span>
       </div>
     </div>
   </section>
@@ -360,7 +1063,7 @@
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>Ready to be found? <span class="gold">Let's fix it.</span></h2>
-      <p>Email us your business name and what you do. We'll reply within one business day with honest next steps — no pressure, no jargon.</p>
+      <p>Email us your business name and what you do — or just call. We'll reply within one business day with honest next steps — no pressure, no jargon.</p>
       <p class="addr">theagencyuniverse@gmail.com</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="mailto:theagencyuniverse@gmail.com?subject=Website%20for%20my%20business%20—%20WebFix%20Local">Email WebFix Local</a>
@@ -372,16 +1075,30 @@
 
 <footer class="site">
   <div class="wrap foot-in">
-    <div class="fb">
-      <img src="logo.png" alt="" width="1600" height="533">
-      <span>Websites for Local Businesses</span>
+    <div>
+      <div class="fb">
+        <img src="assets/logo.png" alt="" width="1600" height="533">
+        <span>Websites for Local Businesses</span>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/theagencyuniverse/">Instagram</a>
+        <a href="https://www.tiktok.com/@theagencyuniverse">TikTok</a>
+        <a href="https://www.youtube.com/@TheAgencyUniverse">YouTube</a>
+        <a href="https://www.facebook.com/profile.php?id=61595901165812">Facebook</a>
+      </div>
     </div>
     <div>
-      WebFix Local is a service of The Agency Universe, Grand Rapids, Michigan.<br>
-      © <span id="yr">2026</span> The Agency Universe · <a href="mailto:theagencyuniverse@gmail.com">theagencyuniverse@gmail.com</a> · Find us on <a href="https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639">Upwork</a> and <a href="https://contra.com/the_agency_universe/services">Contra</a> · <a href="tel:+12693130843">(269) 313-0843</a>
+      <a href="tel:+12693130843">(269) 313-0843</a> · <a href="mailto:theagencyuniverse@gmail.com">theagencyuniverse@gmail.com</a><br>
+      <p class="foot-div">WebFix Local is the local-services division of <a href="https://ycmxrrow.github.io/agency-universe/">The Agency Universe</a>, Grand Rapids, Michigan.</p>
+      © <span id="yr">2026</span> The Agency Universe · <a href="https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639">Upwork</a> · <a href="https://contra.com/the_agency_universe/services">Contra</a>
     </div>
   </div>
 </footer>
+
+<a class="mobile-call" href="tel:+12693130843">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+  Call (269) 313-0843
+</a>
 
 <script>
 (function () {
@@ -401,5 +1118,610 @@
   });
 })();
 </script>
+
+  <!-- ======================================================================
+       FAQ CHATBOT WIDGET HTML INJECTION
+       Self-contained, accessible, prefixed markup for the widget
+       ====================================================================== -->
+  <div class="faqw-container" id="faqw-root">
+    <!-- Floating Trigger Bubble Button -->
+    <button type="button" class="faqw-bubble-btn" id="faqw-toggle-btn" aria-label="Open FAQ Chatbot" aria-expanded="false" aria-controls="faqw-chat-panel">
+      <!-- Chat SVG Icon -->
+      <svg class="faqw-icon-chat" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+        <circle cx="8" cy="10" r="1.5"/>
+        <circle cx="12" cy="10" r="1.5"/>
+        <circle cx="16" cy="10" r="1.5"/>
+      </svg>
+      <!-- Close SVG Icon (shown when open) -->
+      <svg class="faqw-icon-close" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+      </svg>
+    </button>
+
+    <!-- Expandable Chat Dialog Panel -->
+    <section class="faqw-panel" id="faqw-chat-panel" role="dialog" aria-label="FAQ Assistant Chat" hidden>
+      <!-- Header -->
+      <div class="faqw-header" id="faqw-header">
+        <div class="faqw-header-info">
+          <div class="faqw-avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h2a3 3 0 0 1 3 3v1h1a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-1H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h1v-1a3 3 0 0 1 3-3h2V5.72A2 2 0 0 1 10 4a2 2 0 0 1 2-2zm-4 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm8 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6.5 6a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5h-5z"/>
+            </svg>
+          </div>
+          <div class="faqw-header-text">
+            <span class="faqw-header-title" id="faqw-business-name-header">WebFix Local</span>
+            <span class="faqw-header-status">
+              <span class="faqw-status-dot" aria-hidden="true"></span>
+              FAQ Assistant &bull; Instant Answers
+            </span>
+          </div>
+        </div>
+        <button type="button" class="faqw-close-btn" id="faqw-close-btn" aria-label="Close FAQ Chatbot">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Trust Framing Sub-Banner -->
+      <div class="faqw-sub-banner">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+        </svg>
+        <span>Verified answers about our services</span>
+      </div>
+
+      <!-- Messages Container -->
+      <div class="faqw-messages" id="faqw-messages" aria-live="polite" aria-relevant="additions text">
+        <!-- Messages & initial greeting will be rendered dynamically here -->
+      </div>
+
+      <!-- Input and Send Controls -->
+      <form class="faqw-input-area" id="faqw-form" onsubmit="return false;">
+        <div class="faqw-input-wrapper">
+          <input 
+            type="text" 
+            class="faqw-input" 
+            id="faqw-user-input" 
+            placeholder="Ask a question (e.g. hours, pricing)..." 
+            aria-label="Ask a question about our business" 
+            autocomplete="off"
+            spellcheck="true"
+          />
+        </div>
+        <button type="submit" class="faqw-send-btn" id="faqw-send-btn" aria-label="Send question">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+    </section>
+  </div>
+
+  <!-- ======================================================================
+       WIDGET JAVASCRIPT & CONFIGURATION BLOCK
+       ====================================================================== -->
+  <script>
+    (function () {
+      "use strict";
+
+      // ======================================================================
+      // === 1. EDIT YOUR CHATBOT CONFIGURATION HERE ==========================
+      // ======================================================================
+      // Small business owners: Customize the variables in this section to match
+      // your business name, brand colors, contact email, and greeting message.
+      // No coding knowledge required — just edit the text inside the quotes.
+      //
+      // HONEST FRAMING NOTE:
+      // This smart assistant answers ONLY the verified questions configured in
+      // FAQ_DATA below. It is not an unconstrained open-ended LLM, and that is
+      // completely intentional: it does not invent unauthorized discounts,
+      // fabricate nonexistent guarantees, or invent false policies beyond that list.
+      // ======================================================================
+      const CONFIG = {
+        // Business Name displayed in the widget header and system messages
+        businessName: "WebFix Local",
+
+        // Initial greeting displayed when visitor opens the widget
+        greetingLine: "Hello! Welcome to WebFix Local. I can answer questions about our prices, the free first look, our service area, and how getting started works \u2014 ask away.",
+
+        // Brand colors (Hex codes)
+        primaryColor: "#0B2561",    // Main theme color (header, user bubbles, button)
+        accentColor: "#071A45",     // Darker hover/press state
+
+        // Contact email used in the fallback response when a question is outside FAQ_DATA
+        contactEmail: "theagencyuniverse@gmail.com",
+
+        // Message shown when a visitor question does not match any entry in FAQ_DATA
+        fallbackMessage: "I'm sorry, I don't have a verified answer for that in our FAQs. For accurate help, please email us at {EMAIL} or call us at (269) 313-0843 \u2014 first reply within one business day.",
+
+        // Suggested starter questions displayed as quick clickable chips
+        suggestedQuestions: [
+          "How much does a website cost?",
+          "What does the free first look include?",
+          "What areas do you serve?",
+          "What if something breaks?"
+        ],
+
+        // Minimum match score threshold to return an answer (prevents false positives)
+        matchThreshold: 1.5
+      };
+
+      // ======================================================================
+      // === 2. EDIT YOUR QUESTIONS AND ANSWERS HERE ==========================
+      // ======================================================================
+      // WEBFIX DATA: 10 Q&As with WebFix Local’s real published facts.
+      // Small business owners can add, remove, or modify entries below.
+      // Each entry has:
+      //   - q: The question visitors commonly ask
+      //   - a: The accurate, approved answer to deliver
+      //   - keywords: Words or short phrases that should match this answer
+      // ======================================================================
+      const FAQ_DATA = [
+        // 1. Pricing
+        {
+          q: "How much does a website cost?",
+          a: "Our One-Page Website Fix is $750 flat \u2014 half to start, half at launch, no surprises. The full price list is published on this page: Google Business Profile fix-up $249 one-time, Website Care Plan $300-500/mo, Google Business Profile management $250/mo, the care + profile bundle $399/mo, and FAQ chatbot setup from $75. And the first look is free \u2014 we check your current site and listing before you spend anything.",
+          keywords: ["cost", "costs", "price", "pricing", "charge", "how much", "quote", "estimate", "rates", "fee", "fees", "expensive"]
+        },
+        // 2. Free first look
+        {
+          q: "What does the free first look include?",
+          a: "It's free. We look at your current website (or whatever shows up instead of one) and your Google Business Profile, and tell you in plain words what's helping, what's hurting, and what we'd fix first \u2014 no obligation. If you'd rather check yourself, our free Local Business Website Readiness Checklist is linked near the top of this page.",
+          keywords: ["free", "check", "first look", "audit", "review", "checklist", "look", "evaluate", "assessment"]
+        },
+        // 3. Service area
+        {
+          q: "What areas do you serve?",
+          a: "We're in Grand Rapids, Michigan, and we serve service businesses across Kent County \u2014 including Wyoming, Kentwood, Grandville, Walker, Comstock Park, Jenison, Hudsonville, Byron Center, and Cascade.",
+          keywords: ["area", "areas", "serve", "service area", "location", "where", "cities", "towns", "near", "local", "cover", "coverage", "grand rapids", "kent county"]
+        },
+        // 4. Getting started / contact
+        {
+          q: "How do I get started?",
+          a: "Call us at (269) 313-0843 or email theagencyuniverse@gmail.com with your business name, what you offer, and your service area. We'll reply within one business day with honest next steps \u2014 no pressure and no jargon. To build your page we'll ask for your logo and photos if you have them; phone photos are fine.",
+          keywords: ["start", "started", "begin", "book", "hire", "schedule", "contact", "sign up", "call", "email", "phone", "reach", "talk", "human"]
+        },
+        // 5. How the build works
+        {
+          q: "How does the website build work?",
+          a: "Three steps: you tell us about your business, we build the page and send you a preview to check on your own phone, then you get 2 rounds of revisions before launch. Your site is a static build \u2014 no database, no logins, no plugins to maintain \u2014 and the finished files are yours, with no lock-in.",
+          keywords: ["process", "steps", "works", "build", "revisions", "preview", "launch", "own", "files", "yours", "lock-in"]
+        },
+        // 6. Defects / support
+        {
+          q: "What if something breaks after launch?",
+          a: "Email or call us \u2014 you never troubleshoot anything yourself. Defects in our work are fixed free for 30 days after launch, and we run a QA check on every fix before we tell you it's done. First reply within one business day.",
+          keywords: ["break", "breaks", "broken", "wrong", "problem", "fix", "defect", "defects", "warranty", "guarantee", "support", "help"]
+        },
+        // 7. Updates / care plan
+        {
+          q: "Can you update my site later \u2014 new prices or photos?",
+          a: "Yes. Order a single change anytime, or take the Website Care Plan ($300-500/mo): monthly content updates, link and form checks, uptime and speed spot-checks, and a plain-English report every month. Content changes aren't defects, so they're not part of the free 30-day defect window \u2014 the care plan exists exactly for them.",
+          keywords: ["update", "updates", "change", "changes", "maintain", "maintenance", "edit", "care plan", "later", "new prices"]
+        },
+        // 8. Rankings honesty
+        {
+          q: "Will this make my business #1 on Google?",
+          a: "No \u2014 and be careful with anyone who promises that. Google itself says nobody can sell or guarantee a #1 ranking. What we do is the real work: a fast page Google can read, basic local SEO setup, and a correct, complete Google Business Profile.",
+          keywords: ["ranking", "rank", "#1", "number one", "seo", "google", "found", "search", "top", "first on google"]
+        },
+        // 9. The chatbot itself
+        {
+          q: "What is the FAQ chatbot?",
+          a: "It's a small chat widget for your website \u2014 this chat is one, running right here on our own page. It answers customer questions only from an FAQ list you approve: your prices, hours, area, and policies. It doesn't make things up. Setup starts at $75, with no monthly platform fees.",
+          keywords: ["chatbot", "chat", "bot", "widget", "ai", "assistant", "faq", "robot"]
+        },
+        // 10. Google Business Profile
+        {
+          q: "Can you fix my Google listing?",
+          a: "Yes. The Google Business Profile Fix-Up is $249 one-time: categories, services, photos, hours, and details corrected \u2014 and you keep ownership; we work as a manager. Ongoing management (posts, review replies, photo updates, and a monthly report) is $250/mo, or $399/mo bundled with a website care plan.",
+          keywords: ["google", "listing", "profile", "business profile", "maps", "reviews", "gbp", "google listing"]
+        }
+      ];
+
+      // ======================================================================
+      // === END OF EDITABLE CONFIGURATION - DO NOT EDIT BELOW THIS LINE =====
+      // ======================================================================
+
+      // ======================================================================
+      // === 3. MATCHING ENGINE (Deterministic NLP + Keyword + Fuzzy Levenshtein)
+      // ======================================================================
+      // Common stop words to strip before scoring
+      const STOP_WORDS = new Set([
+        "a", "about", "am", "an", "and", "are", "as", "at", "be", "been", "being",
+        "but", "by", "can", "could", "did", "do", "does", "doing", "down", "for",
+        "from", "had", "has", "have", "he", "her", "here", "hers", "him", "his",
+        "how", "i", "if", "in", "into", "is", "it", "its", "me", "might", "more",
+        "most", "my", "myself", "no", "nor", "not", "of", "off", "on", "once",
+        "only", "or", "other", "our", "ours", "out", "over", "own", "same", "she",
+        "should", "so", "some", "such", "than", "that", "the", "their", "theirs",
+        "them", "then", "there", "these", "they", "this", "those", "through", "to",
+        "too", "under", "until", "up", "very", "was", "we", "were", "what", "when",
+        "where", "which", "while", "who", "whom", "why", "will", "with", "would", "you", "your"
+      ]);
+
+      // Normalize text: lowercase, strip punctuation, and keep "24/7" together
+      // as the single token "24x7" so the Emergencies keyword can actually match.
+      function normalizeText(text) {
+        if (text === null || text === undefined) return "";
+        return String(text)
+          .toLowerCase()
+          .replace(/24\s*[\/\-\u2013]\s*7/g, "24x7")
+          .replace(/[^a-z0-9\s]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+      }
+
+      // Split normalized text into scoring tokens (drops stop words, 1-char tokens)
+      function tokenize(text) {
+        var normalized = normalizeText(text);
+        if (!normalized) return [];
+        return normalized.split(" ").filter(function (token) {
+          return token.length > 1 && !STOP_WORDS.has(token);
+        });
+      }
+
+      // Fast Levenshtein distance calculation for fuzzy matching single words
+      function levenshteinDistance(s1, s2) {
+        if (s1 === s2) return 0;
+        if (!s1.length) return s2.length;
+        if (!s2.length) return s1.length;
+        var prevRow = [];
+        for (var i = 0; i <= s2.length; i++) prevRow[i] = i;
+        for (var i = 1; i <= s1.length; i++) {
+          var currentRow = [i];
+          for (var j = 1; j <= s2.length; j++) {
+            var cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+            currentRow[j] = Math.min(
+              prevRow[j] + 1,       // deletion
+              currentRow[j - 1] + 1,// insertion
+              prevRow[j - 1] + cost // substitution
+            );
+          }
+          prevRow = currentRow;
+        }
+        return prevRow[s2.length];
+      }
+
+      // Similarity between two words (0.0 to 1.0).
+      // Exact match = 1.0. Fuzzy matching is typo-only (edit distance), only for
+      // words of 5+ characters, and there is deliberately NO prefix/stem rule:
+      // a prefix rule is what made "afternoon" match the keyword "after".
+      function wordSimilarity(w1, w2) {
+        if (w1 === w2) return 1.0;
+        if (w1.length < 5 || w2.length < 5) return 0.0;
+        var dist = levenshteinDistance(w1, w2);
+        var maxLen = Math.max(w1.length, w2.length);
+        // Allow 1 typo for 5-6 char words, 2 typos for 7+ char words
+        if (maxLen <= 6 && dist <= 1) return 0.8;
+        if (maxLen > 6 && dist <= 2) return 0.7;
+        return 0.0;
+      }
+
+      // True when two words differ only by a plural ending ("service" /
+      // "services", "class" / "classes"). Plural variants count as exact
+      // matches in scoring below.
+      function isPluralVariant(a, b) {
+        var long = a.length > b.length ? a : b;
+        var short = a.length > b.length ? b : a;
+        if (long === short + "s") return short.length >= 3;
+        if (long === short + "es") return /(s|x|z|ch|sh)$/.test(short);
+        return false;
+      }
+
+      // Score a query against one FAQ entry. All comparisons use the same
+      // weighted scale. Exact single-word keyword hits earn 2.5, exact question
+      // hits 1.4, and single words inside a multi-word keyword earn 1.2; fuzzy
+      // (typo) hits earn reduced weights (1.5 / 1.0 / 0.9). A match also needs
+      // an anchor (see the end of this function), so weak signals adding up
+      // can never produce an answer by themselves.
+      function scoreFaqEntry(userTokens, rawQueryNormalized, entry) {
+        var score = 0;
+        var matchedTokens = 0;
+        var anchored = false;
+        var exactQuestionHits = 0;
+        var questionTokens = tokenize(entry.q);
+        var keywordList = entry.keywords || [];
+
+        // 1. Direct multi-word keyword phrase match bonus (exact phrase)
+        for (var k = 0; k < keywordList.length; k++) {
+          var kwPhrase = normalizeText(keywordList[k]);
+          if (kwPhrase.indexOf(" ") !== -1 && rawQueryNormalized.indexOf(kwPhrase) !== -1) {
+            score += 3.5; // Significant boost for an exact phrase like "credit card"
+            anchored = true;
+          }
+        }
+
+        // 2. Per-token best match against keywords and question text
+        for (var u = 0; u < userTokens.length; u++) {
+          var uToken = userTokens[u];
+          var bestTokenScore = 0;
+
+          for (var k = 0; k < keywordList.length; k++) {
+            var kwTokens = normalizeText(keywordList[k]).split(" ");
+            var isMultiWord = kwTokens.length > 1;
+            for (var st = 0; st < kwTokens.length; st++) {
+              if (!kwTokens[st]) continue;
+              var sim = wordSimilarity(uToken, kwTokens[st]);
+              if (sim < 1.0 && isPluralVariant(uToken, kwTokens[st])) sim = 1.0;
+              if (sim <= 0) continue;
+              // A lone word from a multi-word keyword (e.g. "after" from
+              // "after hours") earns a reduced weight; the full phrase is
+              // what earns the phrase bonus above.
+              var cand = isMultiWord
+                ? (sim >= 1.0 ? 1.2 : sim * 0.9)
+                : (sim >= 1.0 ? 2.5 : sim * 1.5);
+              if (!isMultiWord && sim >= 1.0) anchored = true;
+              if (cand > bestTokenScore) bestTokenScore = cand;
+            }
+          }
+
+          var tokenQExact = false;
+          for (var q = 0; q < questionTokens.length; q++) {
+            var simQ = wordSimilarity(uToken, questionTokens[q]);
+            if (simQ < 1.0 && isPluralVariant(uToken, questionTokens[q])) simQ = 1.0;
+            if (simQ <= 0) continue;
+            if (simQ >= 1.0) tokenQExact = true;
+            var candQ = simQ >= 1.0 ? 1.4 : simQ * 1.0;
+            if (candQ > bestTokenScore) bestTokenScore = candQ;
+          }
+          if (tokenQExact) exactQuestionHits++;
+
+          if (bestTokenScore > 0) matchedTokens++;
+          score += bestTokenScore;
+        }
+
+        // An answer needs an anchor: an exact single-word keyword hit, an
+        // exact phrase hit, or exact matches on two or more of the entry's
+        // question words. Weaker signals (one question word, a word inside a
+        // multi-word keyword, a typo) may add up and break ties, but they can
+        // never carry a match on their own.
+        if (!anchored && exactQuestionHits >= 2) anchored = true;
+        if (!anchored) score = 0;
+        return { score: score, matchedTokens: matchedTokens };
+      }
+
+      // A message that is only a greeting is answered with the greeting line
+      // before any FAQ matching happens.
+      var GREETING_PATTERN = /^(hi|hello|hey|howdy|greetings|good morning|good afternoon|good evening|good day)( there)?$/;
+
+      // Main matching function: finds the best answer or returns the fallback.
+      // Ties on score are broken by the number of distinct matched tokens,
+      // then by entry order, so results are deterministic.
+      function matchQuery(rawUserText) {
+        var fallback = { answer: CONFIG.fallbackMessage.replace("{EMAIL}", CONFIG.contactEmail) };
+        if (typeof rawUserText !== "string" || !rawUserText.trim()) {
+          return fallback;
+        }
+
+        var normalizedRaw = normalizeText(rawUserText);
+        if (GREETING_PATTERN.test(normalizedRaw)) {
+          return { answer: CONFIG.greetingLine };
+        }
+
+        var userTokens = tokenize(rawUserText);
+        if (userTokens.length === 0) {
+          return fallback;
+        }
+
+        var bestEntry = null;
+        var highestScore = 0;
+        var bestMatchedTokens = 0;
+
+        for (var i = 0; i < FAQ_DATA.length; i++) {
+          var entry = FAQ_DATA[i];
+          var result = scoreFaqEntry(userTokens, normalizedRaw, entry);
+          if (result.score > highestScore ||
+              (result.score === highestScore && result.score > 0 && result.matchedTokens > bestMatchedTokens)) {
+            highestScore = result.score;
+            bestMatchedTokens = result.matchedTokens;
+            bestEntry = entry;
+          }
+        }
+
+        if (bestEntry && highestScore >= CONFIG.matchThreshold) {
+          return { answer: bestEntry.a };
+        }
+
+        return fallback;
+      }
+
+      // ======================================================================
+      // === 4. UI CONTROLLER & EVENT WIRING ==================================
+      // ======================================================================
+      var rootEl = document.getElementById("faqw-root");
+      var toggleBtn = document.getElementById("faqw-toggle-btn");
+      var panel = document.getElementById("faqw-chat-panel");
+      var closeBtn = document.getElementById("faqw-close-btn");
+      var messagesContainer = document.getElementById("faqw-messages");
+      var inputEl = document.getElementById("faqw-user-input");
+      var formEl = document.getElementById("faqw-form");
+      var sendBtn = document.getElementById("faqw-send-btn");
+      var headerTitle = document.getElementById("faqw-business-name-header");
+
+      // If the widget markup is incomplete, exit quietly instead of throwing.
+      if (!rootEl || !toggleBtn || !panel || !closeBtn || !messagesContainer || !inputEl || !formEl || !sendBtn) {
+        return;
+      }
+
+      var isOpen = false;
+      var hasGreeted = false;
+      var isSending = false;
+
+      // Apply dynamic colors and business title from CONFIG
+      rootEl.style.setProperty("--faqw-primary", CONFIG.primaryColor);
+      rootEl.style.setProperty("--faqw-accent", CONFIG.accentColor);
+      if (headerTitle) {
+        headerTitle.textContent = CONFIG.businessName;
+      }
+
+      function formatTime(date) {
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var ampm = h >= 12 ? "PM" : "AM";
+        h = h % 12;
+        h = h ? h : 12;
+        var mStr = m < 10 ? "0" + m : m;
+        return h + ":" + mStr + " " + ampm;
+      }
+
+      function appendMessage(sender, text, chips) {
+        var row = document.createElement("div");
+        row.className = "faqw-msg-row faqw-" + sender;
+
+        var bubble = document.createElement("div");
+        bubble.className = "faqw-msg-bubble";
+        bubble.textContent = text;
+        row.appendChild(bubble);
+
+        // Optional suggested questions chip container
+        if (chips && chips.length > 0) {
+          var chipsContainer = document.createElement("div");
+          chipsContainer.className = "faqw-chips-container";
+          for (var i = 0; i < chips.length; i++) {
+            var chipBtn = document.createElement("button");
+            chipBtn.type = "button";
+            chipBtn.className = "faqw-chip";
+            chipBtn.textContent = chips[i];
+            chipBtn.setAttribute("data-query", chips[i]);
+            chipBtn.addEventListener("click", function (e) {
+              var q = this.getAttribute("data-query");
+              handleUserSubmit(q);
+            });
+            chipsContainer.appendChild(chipBtn);
+          }
+          row.appendChild(chipsContainer);
+        }
+
+        var timeEl = document.createElement("span");
+        timeEl.className = "faqw-msg-time";
+        timeEl.textContent = formatTime(new Date());
+        row.appendChild(timeEl);
+
+        messagesContainer.appendChild(row);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+
+      function showTypingIndicator() {
+        var typing = document.createElement("div");
+        typing.className = "faqw-typing";
+        typing.id = "faqw-typing-indicator";
+        typing.innerHTML = '<span class="faqw-typing-dot"></span><span class="faqw-typing-dot"></span><span class="faqw-typing-dot"></span>';
+        messagesContainer.appendChild(typing);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        var typing = document.getElementById("faqw-typing-indicator");
+        if (typing && typing.parentNode) {
+          typing.parentNode.removeChild(typing);
+        }
+      }
+
+      function openPanel() {
+        if (isOpen) return;
+        isOpen = true;
+        rootEl.classList.add("faqw-is-open");
+        panel.removeAttribute("hidden");
+        toggleBtn.setAttribute("aria-expanded", "true");
+        toggleBtn.setAttribute("aria-label", "Close FAQ Chatbot");
+
+        // Initial greeting on first opening
+        if (!hasGreeted) {
+          hasGreeted = true;
+          appendMessage("bot", CONFIG.greetingLine, CONFIG.suggestedQuestions);
+        }
+
+        setTimeout(function () {
+          inputEl.focus();
+        }, 120);
+      }
+
+      function closePanel() {
+        if (!isOpen) return;
+        isOpen = false;
+        rootEl.classList.remove("faqw-is-open");
+        panel.setAttribute("hidden", "true");
+        toggleBtn.setAttribute("aria-expanded", "false");
+        toggleBtn.setAttribute("aria-label", "Open FAQ Chatbot");
+        toggleBtn.focus();
+      }
+
+      function togglePanel() {
+        if (isOpen) {
+          closePanel();
+        } else {
+          openPanel();
+        }
+      }
+
+      // Single submit path for the send button, Enter key, chips, and the
+      // public API. The busy flag gates every path, so overlapping sends
+      // cannot double-post.
+      function handleUserSubmit(queryText) {
+        var text = (typeof queryText === "string" ? queryText : inputEl.value).trim();
+        if (!text || isSending) return false;
+        isSending = true;
+
+        // Render visitor message
+        appendMessage("user", text);
+        inputEl.value = "";
+        inputEl.focus();
+
+        // Brief realistic typing delay (220ms)
+        showTypingIndicator();
+        sendBtn.disabled = true;
+
+        setTimeout(function () {
+          removeTypingIndicator();
+          sendBtn.disabled = false;
+          isSending = false;
+          var result = matchQuery(text);
+          appendMessage("bot", result.answer);
+        }, 220);
+        return true;
+      }
+
+      // Event Listeners
+      toggleBtn.addEventListener("click", togglePanel);
+      closeBtn.addEventListener("click", closePanel);
+
+      formEl.addEventListener("submit", function (e) {
+        e.preventDefault();
+        handleUserSubmit();
+      });
+
+      inputEl.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          handleUserSubmit();
+        }
+      });
+
+      // Escape key closes panel and restores focus
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && isOpen) {
+          closePanel();
+        }
+      });
+
+      // Expose public API for host page buttons. query() never throws on
+      // non-string input, and it opens the panel before posting so a message
+      // is never added out of sight.
+      window.FaqWidget = {
+        open: openPanel,
+        close: closePanel,
+        toggle: togglePanel,
+        query: function (text) {
+          if (typeof text !== "string" || !text.trim()) return false;
+          if (!isOpen) openPanel();
+          return handleUserSubmit(text);
+        }
+      };
+    })();
+  </script>
+<!-- END FAQ WIDGET - COPY TO HERE -->
 </body>
 </html>
