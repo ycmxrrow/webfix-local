@@ -25,7 +25,7 @@
   "slogan": "Websites for Local Businesses",
   "url": "https://ycmxrrow.github.io/webfix-local/",
   "email": "collin@theagencyuniverse.com",
-  "telephone": "+1-269-313-0843",
+  "telephone": "+1-616-349-8793",
   "priceRange": "$750",
   "image": "https://ycmxrrow.github.io/webfix-local/assets/logo.png",
   "address": {
@@ -113,8 +113,12 @@
     {
       "@type": "Offer",
       "name": "Website Care Plan",
-      "price": "300",
-      "priceCurrency": "USD"
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "300",
+        "maxPrice": "500",
+        "priceCurrency": "USD"
+      }
     },
     {
       "@type": "Offer",
@@ -126,12 +130,6 @@
       "@type": "Offer",
       "name": "Care + Profile Bundle",
       "price": "399",
-      "priceCurrency": "USD"
-    },
-    {
-      "@type": "Offer",
-      "name": "FAQ Chatbot Setup",
-      "price": "75",
       "priceCurrency": "USD"
     }
   ]
@@ -336,6 +334,9 @@
   }
   .feat li::before{content:"";flex:0 0 auto;width:.62rem;height:.62rem;background:var(--gold);border-radius:2px;transform:translateY(-2px)}
   .feat li span{font-weight:400;color:#C6CEE4;font-size:.82em}
+  .screen.paper .feat,.screen.white .feat{border-top-color:var(--line)}
+  .screen.paper .feat li,.screen.white .feat li{border-bottom-color:var(--line)}
+  .screen.paper .feat li span,.screen.white .feat li span{color:var(--ink)}
 
   /* Giant price */
   .price-huge{
@@ -495,9 +496,9 @@
       <a href="../#faq">FAQ</a>
       <a href="../#contact">Contact</a>
     </nav>
-    <a class="call-btn" href="tel:+12693130843">
+    <a class="call-btn" href="tel:+16163498793">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
-      (269) 313-0843
+      (616) 349-8793
     </a>
   </div>
 </header>
@@ -510,7 +511,8 @@
       <p class="lede">Prices change. Hours change. Photos get old. A website nobody updates quietly stops matching the business — and customers notice before you do. The care plan hands all of that to us for $300–500/mo, month to month. Stop anytime.</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="mailto:collin@theagencyuniverse.com?subject=Website%20care%20plan%20—%20WebFix%20Local">Ask About Care Plans</a>
-        <a class="btn btn-ghost" href="tel:+12693130843">Call (269) 313-0843</a>
+        <a class="btn btn-ghost" href="tel:+16163498793">Call (616) 349-8793</a>
+        <a class="btn btn-ghost" href="../sample-care-report/">See a Sample Monthly Care Report</a>
       </div>
     </div>
   </section>
@@ -533,13 +535,13 @@
     <div class="wrap">
       <p class="kicker">One Plan or the Bundle</p>
       <h2 class="mega" style="color:var(--navy)">Priced in the open, <span style="color:var(--gold-dark)">like everything we sell.</span></h2>
-      <div class="price-list">
+      <div class="price-list on-paper">
         <div class="row"><div><b>One-Page Website Fix</b><br><span>The full build — preview on your own phone before launch</span></div><div class="amt">$750</div></div>
         <div class="row"><div><b>Google Business Profile Fix-Up</b><br><span>Categories, services, photos, hours — corrected. You keep ownership.</span></div><div class="amt">$249</div></div>
         <div class="row"><div><b>Website Care Plan</b><br><span>Updates, checks, and a plain-English report every month</span></div><div class="amt">$300–500/mo</div></div>
         <div class="row"><div><b>Google Business Profile Management</b><br><span>Posts, review replies, photo updates, monthly report</span></div><div class="amt">$250/mo</div></div>
         <div class="row"><div><b>Care + Profile Bundle</b><br><span>Both, one report, one bill</span></div><div class="amt">$399/mo</div></div>
-        <div class="row"><div><b>FAQ Chatbot Setup</b><br><span>Answers only from an FAQ list you approve</span></div><div class="amt">from $75</div></div>
+        <div class="row"><div><b>FAQ Chatbot Setup</b><br><span>Answers only from an FAQ list you approve</span></div><div class="amt">Quoted with build or care</div></div>
       </div>
       <p class="price-note">Want your Google listing handled too? Profile management is $250/mo — or bundle both for $399/mo, one report and one bill.</p>
     </div>
@@ -568,7 +570,7 @@
       <p class="lede">Email us your business name and what you do — or just call. We'll reply within one business day with honest next steps — no pressure, no jargon.</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="mailto:collin@theagencyuniverse.com?subject=Website%20care%20plan%20—%20WebFix%20Local">Email WebFix Local</a>
-        <a class="btn btn-ghost" href="tel:+12693130843">Call (269) 313-0843</a>
+        <a class="btn btn-ghost" href="tel:+16163498793">Call (616) 349-8793</a>
       </div>
     </div>
   </section>
@@ -588,15 +590,19 @@
       </div>
     </div>
     <div>
-      <a href="tel:+12693130843">(269) 313-0843</a> · <a href="mailto:collin@theagencyuniverse.com">collin@theagencyuniverse.com</a><br>
+      <a href="tel:+16163498793">(616) 349-8793</a> · <a href="mailto:collin@theagencyuniverse.com">collin@theagencyuniverse.com</a><br>
       <p class="foot-div">WebFix Local is the local-services division of <a href="https://theagencyuniverse.com/">The Agency Universe</a>, Grand Rapids, Michigan.</p>
       © <span id="yr">2026</span> The Agency Universe · <a href="https://www.upwork.com/services/product/development-it-one-page-website-for-your-local-business-fast-static-tap-to-call-2117870186496250639">Upwork</a> · <a href="https://contra.com/the_agency_universe/services">Contra</a>
     </div>
   </div>
   <div class="wrap" style="margin-top:2.2rem">
       <p style="color:var(--gold);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin:0 0 .8rem">Services &amp; Areas</p>
-      <nav class="areasnav" style="display:flex;gap:1.1rem;flex-wrap:wrap" aria-label="Services and areas"><a href="../google-business-profile-fix-up/" style="color:var(--gold);text-decoration:none;font-weight:700">Google Business Profile Fix-Up</a><a href="../website-care-plan/" style="color:var(--gold);text-decoration:none;font-weight:700">Website Care Plan</a><a href="../faq-chatbot/" style="color:var(--gold);text-decoration:none;font-weight:700">FAQ Chatbot Setup</a><a href="../web-design-wyoming-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Wyoming, MI</a><a href="../web-design-kentwood-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Kentwood, MI</a><a href="../web-design-grandville-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Grandville, MI</a><a href="../web-design-byron-center-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Byron Center, MI</a><a href="../web-design-walker-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Walker, MI</a></nav>
+      <nav class="areasnav" style="display:flex;gap:1.1rem;flex-wrap:wrap" aria-label="Services and areas"><a href="../google-business-profile-fix-up/" style="color:var(--gold);text-decoration:none;font-weight:700">Google Business Profile Fix-Up</a><a href="../website-care-plan/" style="color:var(--gold);text-decoration:none;font-weight:700">Website Care Plan</a><a href="../web-design-wyoming-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Wyoming, MI</a><a href="../web-design-kentwood-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Kentwood, MI</a><a href="../web-design-grandville-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Grandville, MI</a><a href="../web-design-byron-center-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Byron Center, MI</a><a href="../web-design-walker-mi/" style="color:var(--gold);text-decoration:none;font-weight:700">Web Design in Walker, MI</a></nav>
     </div>
 </footer>
+<a class="mobile-call" href="tel:+16163498793">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+  Call (616) 349-8793
+</a>
 </body>
 </html>
